@@ -11,4 +11,4 @@
 // VOTING RULE
 /////////////////////////////////////////////////////////////////////////
 
-#include "../voting-rules/copeland-choice-function.h"
+#include "../voting-rules/plurality-choice-function.h"

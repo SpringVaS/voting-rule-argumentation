@@ -136,6 +136,10 @@ if [[ $RULES == "copeland.h" ]]
 then
     rule="COPELAND"
 fi
+if [[ $RULES == "plurality.h" ]]
+then
+    rule="PLURALITY"
+fi
 RULES='"'"$RULES"'"'
 RULES="-D RULES="$RULES
 p=`./scripts/printProperties.sh "$PROP_STRING" | sed 's/^[ \t]*//;s/[ \t]*$//' | sed 's/ /, /g'`

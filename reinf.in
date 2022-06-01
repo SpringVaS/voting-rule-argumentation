@@ -34,7 +34,7 @@ REINF       N
 REINF_SUB   0
 
 # Simplify
-SIMP        0
+SIMP        N
 
 # Majority
 MAJ         0

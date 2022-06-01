@@ -1,5 +1,5 @@
 struct result election_function(unsigned int votes[V][C]) {
-    RULE[0] = "BORDA";
+    RULE[0] = "PLURALITY";
     struct result r;
     unsigned int res[C];
     unsigned int i = 0;
@@ -12,10 +12,8 @@ struct result election_function(unsigned int votes[V][C]) {
         res[i] = 0;
     }
     for (i = 0; i < V; i++) {
-        for (j = 0; j < C; j++) {
-            if (votes[i][j] < C) {
-                res[votes[i][j]] += (C - j) - 1;
-            }
+        if (votes[i][j] < C) {
+            res[votes[i][0]]++;
         }
     }
     unsigned int max = 0;
